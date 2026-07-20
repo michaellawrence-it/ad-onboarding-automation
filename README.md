@@ -3,7 +3,7 @@
 PowerShell-driven Active Directory user provisioning for a 100+ employee HIPAA-regulated healthcare organization.
 
 ## Problem
-Every new hire meant a manual checklist: create the AD account, set attributes, add security groups, create the mailbox, hope nothing got fat-fingered. Manual entry produced inconsistent attributes — and in an environment where **security-group membership is derived from those attributes**, one typo meant wrong access on day one. The org grew from 65 to 120 employees with no added IT staff; manual provisioning didn't scale.
+Every new hire meant a manual checklist: create the AD account, set attributes, add security groups, create the mailbox, hope nothing got fat-fingered. Manual entry produced inconsistent attributes - and in an environment where **security-group membership is derived from those attributes**, one typo meant wrong access on day one. The org grew from 65 to 120 employees with no added IT staff; manual provisioning didn't scale.
 
 ## Approach
 One script owns the whole flow. HR-supplied details go in; a correctly-attributed, correctly-grouped, least-privilege account comes out.
@@ -36,7 +36,7 @@ PS> .\New-Employee.ps1 -FirstName Jane -LastName Doe -Department Billing `
 ## Result
 - Provisioning errors from manual entry: **eliminated**
 - Onboarding time: a checklist of console clicks → **one command**
-- Access control: consistent and auditable — membership is a function of HR attributes
+- Access control: consistent and auditable - membership is a function of HR attributes
 - Scaled 65→120 headcount with **zero added IT staff**
 
 ## Stack
