@@ -13,14 +13,14 @@ HR intake (name, dept, title, location, hire date)
         │
         ▼
 New-Employee.ps1
-  ├─ Generates username + mailbox per naming convention
+  ├─ Generates michaellawrence-it + mailbox per naming convention
   ├─ Creates the AD account in the right OU
   ├─ Stamps department / title / location / hireDate attributes
   └─ Entra ID dynamic-group rules take it from there:
      attributes → security groups → SharePoint/app access
 ```
 
-The key design choice: the script **doesn't assign groups directly**. It stamps attributes, and [attribute-driven dynamic groups](https://github.com/USERNAME/entra-dynamic-groups) resolve membership. Access logic lives in one reviewable place instead of scattered ad-hoc grants.
+The key design choice: the script **doesn't assign groups directly**. It stamps attributes, and [attribute-driven dynamic groups](https://github.com/michaellawrence-it/entra-dynamic-groups) resolve membership. Access logic lives in one reviewable place instead of scattered ad-hoc grants.
 
 ## Sample run (fake data)
 ```powershell
