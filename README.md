@@ -13,7 +13,7 @@ HR intake (name, dept, title, location, hire date)
         │
         ▼
 New-Employee.ps1
-  ├─ Generates michaellawrence-it + mailbox per naming convention
+  ├─ Generates username + mailbox per naming convention
   ├─ Creates the AD account in the right OU
   ├─ Stamps department / title / location / hireDate attributes
   └─ Entra ID dynamic-group rules take it from there:
