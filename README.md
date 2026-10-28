@@ -3,7 +3,7 @@
 Active Directory user provisioning for a 100+ employee HIPAA-regulated healthcare organization: one self-contained, self-elevating tool that turns a new-hire intake into a correctly-attributed, correctly-grouped, least-privilege account with no console clicking.
 
 ## Problem
-Every new hire meant a manual checklist: create the AD account, set a dozen properties, add security groups, hope nothing got fat-fingered. Manual entry produced inconsistent attributes, and in an environment where **access is derived from those attributes**, one typo meant wrong access on day one. The org grew from 65 to 120 employees with no added IT staff; manual provisioning didn't scale.
+Every new hire meant a manual checklist: create the AD account, set a dozen properties, add security groups, hope nothing got fat-fingered. Manual entry produced inconsistent attributes, and in an environment where **access is derived from those attributes**, one typo meant wrong access on day one. The org grew from 65 to 120 employees in two years; manual provisioning didn't scale.
 
 ## The tool: [`Create-ADUser.bat`](Create-ADUser.bat)
 A single file that is both the launcher and the payload: a batch wrapper that **checks for elevation, relaunches itself as Administrator if needed**, then extracts and runs the PowerShell payload embedded after a marker in the same file. One artifact to deploy, double-click to run, no "open an elevated prompt first" instructions for whoever runs onboarding.
@@ -42,7 +42,7 @@ The attributes this tool writes are not decoration; they are the org's access AP
 - Provisioning errors from manual entry: **eliminated** (double-entry + menus + duplicate pre-check)
 - Onboarding time: a checklist of console clicks became **one guided run**
 - Access control: consistent and auditable, membership is a function of stamped attributes
-- Scaled 65→120 headcount with **zero added IT staff**
+- Onboarding kept pace with **65→120 headcount** growth in two years
 
 ## Stack
 PowerShell · ActiveDirectory module · batch/PowerShell hybrid packaging · Entra ID (dynamic membership rules)
